@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plot Dots Along External SVG Paths</title>
+
+    <style lang="text/css">
+        body{
+            margin:0;
+            padding:0;
+        }
+        canvas {
+            position:absolute;
+
+            top: 0;
+            left: 0;
+            width:640px;
+            height:480px;
+            margin:10px;
+
+        }
+        div#svgContainer{
+            position: relative;
+            top: 0;
+            left: 0;
+            width:640px;
+            height:480px;
+            border:2px solid lightgray;
+            margin:10px;
+
+        }
+
+    </style>
+    <script type="text/javascript" src="dat.gui.min.js"></script>
+
+</head>
+<body>
+<div id="svgContainer"></div> <!-- Container for loading the SVG -->
+<canvas id="canvas" width="640" height="480"></canvas>
+
+<div>
+    <input type="range" id="speedslider" name="volume" min="1" max="10" />
+    <label for="speedslider">Speed (percent of curve per second)</label>
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>
